@@ -154,4 +154,7 @@ footer img {
   gap: 5px;
 }
 
-
+.Socials {
+  display: flex;
+  align-items: center;
+}
