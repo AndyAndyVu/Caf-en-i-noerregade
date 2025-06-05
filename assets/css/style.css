@@ -86,3 +86,14 @@ h1, h2, h3, h4 {
   --mobile-margin: 20px;
   
 }
+
+/*  */
+/* Our Styling */
+/*  */
+
+nav {
+  background-color: var(--color-pink);
+  color: var(--color-white);
+  height: 64px;
+  width: 100vw;
+}
