@@ -92,8 +92,97 @@ h1, h2, h3, h4 {
 /*  */
 
 nav {
+  position: relative;
   background-color: var(--color-pink);
-  color: var(--color-white);
   height: 64px;
   width: 100vw;
+  padding-inline: 20px;
+  padding-block: 5px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo{
+  position: relative;
+  text-decoration: none;
+}
+.logoText {
+  font-family: quicksand, sans-serif;
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+}
+.logoSVG {
+  height: 28px;
+  width: 24px;
+
+  position: absolute;
+  right: 9%;
+  top: 0;
+}
+
+.menuButton{
+  all: unset;
+  cursor: pointer;
+}
+.fa-solid.fa-bars {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  
+  font-size: 30px;
+}
+
+.menuContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+
+  background-color: var(--color-lime-green);
+  list-style-type: none;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.menuContainerActive {
+  transform: translate(35%, 0);
+}
+
+.menuContainer li a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+summary{
+  list-style: none;
+  display: inline-flex;
+  cursor: pointer;
+}
+summary::after {
+  content: "▸";
+  padding-left: 5px;
+}
+details[open] summary::after {
+  content: "▾";
+}
+
+details li{
+  font-size: 16px;
+  font-weight: 400;
 }
