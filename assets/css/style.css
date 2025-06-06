@@ -110,7 +110,10 @@ footer {
   width: 100vw;
   background-color: var(--color-lime-green);
 }
-
+.footer-container {
+  margin-right: 75px;
+  margin-left: 75px;
+}
 footer img {
   width: 86px;
   height: 48px;
@@ -122,20 +125,16 @@ footer img {
   margin-top: var(--mobile-spacing-md)
 }
 .footer-text {
-  display: flex;
-  flex-direction: column;
   align-items: center;
   margin-top: var(--mobile-spacing-md);
-  margin-right: 75px;
-  margin-left: 75px;
+
 }
 .åbningstider {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: var(--mobile-spacing-sm);
-  margin-left: var(--mobile-spacing-md);
-  
+
 }
 .Kontakt-container {
   display: flex;
@@ -164,3 +163,6 @@ footer img {
   align-items: center;
   margin-bottom: var(--mobile-spacing-sm);
 }
+
+
+
