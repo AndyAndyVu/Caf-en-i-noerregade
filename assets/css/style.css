@@ -145,7 +145,9 @@ nav {
   right: 0;
   width: 100vw;
   height: 100vh;
-  padding: 20px;
+
+  padding-inline: 20px;
+  padding-block: 20px;
 
   display: flex;
   flex-direction: column;
@@ -154,15 +156,18 @@ nav {
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
 
-  background-color: var(--color-lime-green);
+  background-color: var(--color-pink);
   list-style-type: none;
 
-  font-size: 18px;
-  font-weight: 700;
+  font-size: var(--mobile-h4);
+  font-weight: var(--font-weight-bold);
+
+  border-left: 1px solid black;
 }
 
 .menuContainerActive {
   transform: translate(35%, 0);
+  filter: blur(0px);
 }
 
 .menuContainer li a {
@@ -183,6 +188,6 @@ details[open] summary::after {
 }
 
 details li{
-  font-size: 16px;
-  font-weight: 400;
+  font-size: var(--mobile-body);
+  font-weight: var(--font-weight-regular);
 }
