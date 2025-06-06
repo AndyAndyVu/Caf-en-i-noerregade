@@ -114,28 +114,32 @@ footer {
 footer img {
   width: 86px;
   height: 48px;
+  
 }
 
 .footer-top{
   display: flex;
   justify-content: center;
+  margin-top: var(--mobile-spacing-md)
 }
 .footer-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: var(--mobile-spacing-md);
-  margin: 20px;
+  margin-right: 80px;
+  margin-left: 80px;
 }
 .åbningstider {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: var(--mobile-spacing-sm);
 }
 .Kontakt-container {
   display: flex;
   justify-content: center;
-  /* Centrer overskriften og placering */
+  
 }
 .Kontakt, .Socials {
   display: flex;  /* så det centreres inde i siden */
@@ -157,4 +161,5 @@ footer img {
 .Socials {
   display: flex;
   align-items: center;
+  margin-bottom: var(--mobile-spacing-sm);
 }
