@@ -114,7 +114,6 @@ footer {
 footer img {
   width: 86px;
   height: 48px;
-  
 }
 
 .footer-top{
@@ -127,14 +126,16 @@ footer img {
   flex-direction: column;
   align-items: center;
   margin-top: var(--mobile-spacing-md);
-  margin-right: 80px;
-  margin-left: 80px;
+  margin-right: 75px;
+  margin-left: 75px;
 }
 .åbningstider {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: var(--mobile-spacing-sm);
+  margin-left: var(--mobile-spacing-md);
+  
 }
 .Kontakt-container {
   display: flex;
@@ -142,7 +143,7 @@ footer img {
   
 }
 .Kontakt, .Socials {
-  display: flex;  /* så det centreres inde i siden */
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   /* venstrestiller indholdet */
