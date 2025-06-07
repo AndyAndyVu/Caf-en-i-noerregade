@@ -191,6 +191,11 @@ details li{
 }
 
 /* Leverandør */
+.container-leve{
+  margin-right: var(--mobile-spacing-sm);
+  margin-left: var(--mobile-spacing-sm);
+}
+
 .lev-h1{
   display: flex;
   justify-content: center;
