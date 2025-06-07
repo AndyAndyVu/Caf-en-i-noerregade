@@ -189,6 +189,10 @@ details li{
 
 /* Social virksomhed */
 
+.container-social {
+  margin-left: var(--mobile-spacing-sm);
+  margin-right: var(--mobile-spacing-sm);
+}
 .social h1,h2,h3,p {
   margin-bottom: var(--mobile-spacing-sm);
 }
