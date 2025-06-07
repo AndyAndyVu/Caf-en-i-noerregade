@@ -186,3 +186,12 @@ details li{
   font-size: 16px;
   font-weight: 400;
 }
+
+.social h1,h2,h3,p {
+  margin-bottom: var(--mobile-spacing-sm);
+}
+
+.social-pic {
+  width: 393px;
+  height: 400px;
+}
