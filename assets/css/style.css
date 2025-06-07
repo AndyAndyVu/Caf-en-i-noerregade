@@ -208,3 +208,54 @@ details li{
   font-size: var(--mobile-body);
   font-weight: var(--font-weight-regular);
 }
+
+/* Mad med kærlighed */
+.mad-container {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.mad-container p{
+  font-size: var(--mobile-body);
+  margin-bottom: var(--mobile-spacing-sm);
+}
+.mad-container img{
+  max-width: 393px;
+  height: 338;
+  margin-top: var(--mobile-spacing-lg);
+  margin-bottom: var(--mobile-spacing-xl);
+  
+}
+
+.mad-text h1{
+  font-size: var(--mobile-h1);
+  margin-top: var(--mobile-spacing-xl);
+  margin-bottom: var(--mobile-spacing-xl);
+}
+.menu-navigation {
+  width: 393px;
+  height: auto;
+  background-color: var(--color-pink);
+  border-radius: 10px;
+  padding-bottom: var(--mobile-spacing-sm);
+}
+.menu-navigation img {
+  width: 80%;
+  height: auto;
+}
+.menu-navigation h2{
+  font-size: var(--mobile-h2);
+  margin-bottom: var(--mobile-spacing-sm);
+}
+.menu-navigation p, h2 {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.menu-navigation a{
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+.img-center {
+  text-align: center;
+}
