@@ -208,3 +208,53 @@ details li{
   font-size: var(--mobile-body);
   font-weight: var(--font-weight-regular);
 }
+
+/* Kontakt */
+
+.form-container {
+  background-color: var(--color-pink);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 500px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formular-container {
+  display: flex;
+  gap: var(--mobile-spacing-sm);
+}
+
+.formular-navn,
+.formular-efternavn,
+.formular-mail,
+.formular-besked {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--mobile-spacing-md);
+}
+
+.formular-navn,
+.formular-efternavn {
+  flex: 1 1 45%;
+  /* Gør at de deler pladsen 50/50, men kan også bryde ned */
+  min-width: 100px;
+}
+
+input,
+textarea {
+  padding: 8px;
+  border: 2px solid #000;
+  border-radius: 2px;
+}
+
+button {
+  padding: 10px;
+  background-color: var(--color-dark-green);
+  color: white;
+  font-size: var(--cta-DeskAndMobile);
+  border-radius: 25px;
+}
