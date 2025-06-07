@@ -210,7 +210,25 @@ details li{
 }
 
 /* Firmaaftaler */
+.firma-container {
+  margin-right: var(--mobile-spacing-sm);
+  margin-left: var(--mobile-spacing-sm);
+}
 
+.firma-text h1 {
+  font-size: var(--mobile-h1);
+  margin-bottom: var(--mobile-spacing-lg);
+}
+
+.firma-text p {
+  font-size: var(--mobile-body);
+  margin-bottom: var(--mobile-spacing-sm);
+}
+
+.firma-text img {
+  width: 353px;
+  height: 232;
+}
 .form-container {
   background-color: var(--color-pink);
   padding: 20px;
