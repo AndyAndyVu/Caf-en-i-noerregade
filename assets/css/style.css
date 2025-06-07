@@ -187,6 +187,8 @@ details li{
   font-weight: 400;
 }
 
+/* Social virksomhed */
+
 .social h1,h2,h3,p {
   margin-bottom: var(--mobile-spacing-sm);
 }
@@ -194,4 +196,5 @@ details li{
 .social-pic {
   width: 393px;
   height: 400px;
+  margin-bottom: var(--desktop-spacing-lg);
 }
