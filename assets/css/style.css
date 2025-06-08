@@ -210,11 +210,10 @@ details li{
 }
 
 .leverandør-pic{
+  display: block;
   width: 100%;
-  min-width: 350px;
-  max-width: 500px;
-  margin: 0 auto;
   height: auto;
+  max-width: 100%;
   margin-bottom: var(--mobile-spacing-xl);
   margin-top: var(--desktop-spacing-lg);
 }
