@@ -226,8 +226,10 @@ details li{
 }
 
 .firma-text img {
-  width: 353px;
-  height: 232;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 .form-container {
   background-color: var(--color-pink);
