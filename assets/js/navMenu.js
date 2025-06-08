@@ -6,3 +6,4 @@ navMenuButton.addEventListener("click", () => {
   menuContainer.classList.toggle("menuContainerActive");
   menuBlur.classList.toggle("blurActive");
 });
+

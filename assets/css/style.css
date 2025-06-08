@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-*
- {
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -216,8 +215,21 @@ details li{
 .mainForside{
   margin-inline: 20px;
 }
-.mainForside h1, h2, h3, h4, p{
+.mainForside h1, h2, h3, h4, p, .velkommenImg, .fepForside article,
+.menuCardForside{
   margin-bottom: var(--mobile-spacing-md);
+}
+.heroForside{
+  margin-top: var(--mobile-margin);
+  margin-bottom: var(--mobile-margin);
+}
+button {
+  padding: 10px;
+  background-color: var(--color-dark-green);
+  color: white;
+  font-size: var(--cta-DeskAndMobile);
+  border-radius: 25px;
+  border-color: transparent;
 }
 img{
   display: block;
@@ -262,6 +274,10 @@ img{
 
 
 /* Testimonials */
+.testimonials{
+  background-image: url(../img/backgroundStemningTestimonials.svg);
+  background-size: 100%;
+}
 .reviewText{
   font-size: var(--mobile-breadcrumbs);
   margin: 0;
