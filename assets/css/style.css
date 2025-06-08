@@ -90,6 +90,8 @@ h1, h2, h3, h4 {
 /* Our Styling */
 /*  */
 
+/* Navbar */
+/*  */
 nav {
   position: relative;
   background-color: var(--color-pink);
@@ -207,4 +209,93 @@ details[open] summary::after {
 details li{
   font-size: var(--mobile-body);
   font-weight: var(--font-weight-regular);
+}
+
+/* Forside */
+/*  */
+.mainForside{
+  margin-inline: 20px;
+}
+.mainForside h1, h2, h3, h4, p{
+  margin-bottom: var(--mobile-spacing-md);
+}
+img{
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+/* Hero Section */
+.heroForside{
+  text-align: center;
+}
+/* Velkommen section */
+.velkommenImgContainer{
+  display: flex;
+  justify-content: center;
+}
+.velkommenImg{
+  width: 60vw;
+  height: auto;
+  aspect-ratio: 1/1.2;
+
+  border-radius: 10px;
+  object-fit: cover;
+}
+/* Menu Card */
+.menuCardForsideImg{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.menuCardForsideContent{
+  padding: 20px;
+  background-color: var(--color-pink);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/*Focus Entry points*/
+.fepForside img{
+  border-radius: 10px;
+}
+
+
+/* Testimonials */
+.reviewText{
+  font-size: var(--mobile-breadcrumbs);
+  margin: 0;
+}
+.reviewRight{
+  display: flex;
+  justify-content: right;
+  position: relative;
+}
+.reviewBubbleRight{
+  max-width: fit-content;
+  width: 80vw;
+}
+.reviewContentRight{
+  position: absolute;
+  top: 20px;
+  left: 85%;
+  transform: translateX(-100%);
+  width: 60vw;
+  }
+
+.reviewLeft{ 
+  display: flex;
+  justify-content: left;
+  position: relative;
+}
+.reviewBubbleLeft{
+  max-width: fit-content;
+  width: 70vw;
+  transform: scaleX(-1);
+}
+.reviewContentLeft{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 60vw;
 }
