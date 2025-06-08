@@ -227,6 +227,8 @@ details li{
 }
 
 .hvem-text img {
-  width: 352px;
-  height: 278px;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
