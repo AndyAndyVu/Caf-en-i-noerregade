@@ -219,8 +219,10 @@ details li{
   margin-bottom: var(--mobile-spacing-sm);
 }
 .mad-container img{
-  max-width: 393px;
-  height: 338;
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
   margin-top: var(--mobile-spacing-lg);
   margin-bottom: var(--mobile-spacing-xl);
   
@@ -232,15 +234,21 @@ details li{
   margin-bottom: var(--mobile-spacing-xl);
 }
 .menu-navigation {
-  width: 393px;
+  display: block;
+  width: 100%;
   height: auto;
+  max-width: 100%;
   background-color: var(--color-pink);
   border-radius: 10px;
   padding-bottom: var(--mobile-spacing-sm);
 }
 .menu-navigation img {
-  width: 80%;
+  display: block;
+  width: 100%;
   height: auto;
+  max-width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 .menu-navigation h2{
   font-size: var(--mobile-h2);
