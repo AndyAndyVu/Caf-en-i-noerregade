@@ -216,8 +216,10 @@ details li{
 }
 
 .container-arrang img {
-  width: 353px;
-  height: 303px;
+  display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
 }
 
 .arrang-text h1 {
