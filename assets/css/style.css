@@ -258,3 +258,9 @@ button {
   font-size: var(--cta-DeskAndMobile);
   border-radius: 25px;
 }
+
+/* Kontakt */
+
+.kontakt-container p{
+  margin-bottom: var(--mobile-spacing-sm);
+}
