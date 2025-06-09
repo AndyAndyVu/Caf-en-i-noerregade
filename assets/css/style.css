@@ -266,3 +266,19 @@ details li{
   margin-bottom: var(--mobile-spacing-sm);
   font-size: var(--mobile-body);
 }
+
+button {
+  padding: 10px;
+  background-color: var(--color-dark-green);
+  color: white;
+  font-size: var(--cta-DeskAndMobile);
+  border-radius: 25px;
+  border-color: transparent;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
