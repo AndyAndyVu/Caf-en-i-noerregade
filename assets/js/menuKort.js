@@ -19,11 +19,11 @@ const drikkeContainer = document.getElementById("drikke-container");
 // Mangler at lave tags om til emojis
 // Emoji-ikon map til tags
 const tagIcons = {
-  "Vegansk": "🌱",
-  "Børnevenlig": "🧸",
-  "Glutenfri": "🌾",
+  Vegansk: "🌱",
+  Børnevenlig: "🧸",
+  Glutenfri: "🌾",
   "Caféens Anbefaling": "👍",
-  "Mest populære": "⭐"
+  "Mest populære": "⭐",
 };
 
 // fetch for at hente madkategorier
@@ -113,14 +113,22 @@ function renderFoods(foodCategories, foodItems) {
           ${
             id.acf.tags && id.acf.tags.length > 0 //id.acf.tags vil nu vise emojis istedet for "Vegansk", "Glutenfri" da vi har erklæret en variabel længere oppe der siger vi skal erstatte det med emojojis.
               ? id.acf.tags // Hele denne stykke kode checker vi om tag feltet findes og er den længere end 0 altså mindst et tag hvis ja så kører vi koden ellers vises tom felt som ""
-                .map(tag => tagIcons[tag]) // Det er her jeg snakker om "Vegansk, "Glutenfri" Vil blive til ikoner istedet for da vi erklæret en variabel længere oppe.
-                .filter(Boolean) // Den sikrer at vi kun får emojis vist, hvis du fx skriver forkert navn i const og den hedder noget andet på websitet vil den ikke vises.(Fx Vegansk skal staves ensartet begge stedet før emojis erstatter/vises) Hvis vi ikke havde dette, ville der stå undefined. Hvis de var skrevet forkert.
-                .join(" ") // Her siger vi bare ikoner skal ind med mellemrum da vi skriver " " <-  med spacing 
-            : ""
+                  .map((tag) => tagIcons[tag]) // Det er her jeg snakker om "Vegansk, "Glutenfri" Vil blive til ikoner istedet for da vi erklæret en variabel længere oppe.
+                  .filter(Boolean) // Den sikrer at vi kun får emojis vist, hvis du fx skriver forkert navn i const og den hedder noget andet på websitet vil den ikke vises.(Fx Vegansk skal staves ensartet begge stedet før emojis erstatter/vises) Hvis vi ikke havde dette, ville der stå undefined. Hvis de var skrevet forkert.
+                  .join(" ") // Her siger vi bare ikoner skal ind med mellemrum da vi skriver " " <-  med spacing
+              : ""
           }
         </p>
         </div>
         <p>${id.acf.beskrivelse}</p>
+        
+        <!-- 
+        Javascript line breaks is \n but we want to replace it with html line breaks <br>. 
+        /.../ is regular expression tool to find something specific, in our case we look for \n hence the /\n/
+        then we write g in the end for it to find and replace all instances of \n with <br> oterwide its only the first \n that would be replaced.
+        Forexample: -ost 15kr\n-knas 10kr\n-smør 5kr, would look like this -ost 15kr<br>-knas 10kr\n-smør 5kr without g. 
+        -->
+        <p>${id.acf.tilkob.replace(/\n/g, "<br>")}</p> 
         </div> 
         <div class="foodPrice"> 
         <h3>${id.acf.pris},-</h3>
@@ -166,11 +174,11 @@ async function initDrinks() {
     // Venter på at hente drikkekategorier og drikkevarer fra API'et
     const drinkCategories = await getPublicDrinkCategories();
     const drinkItems = await getPublicDrinkItems();
-    
+
     // Logger de hentede data til konsollen for debugging
     console.log(drinkCategories);
     console.log(drinkItems);
-    
+
     // Kalder renderDrinks med de hentede data
     renderDrinks(drinkCategories, drinkItems);
   } catch (error) {
@@ -200,11 +208,11 @@ function renderDrinks(drinkCategories, drinkItems) {
               <div class="foodTitleTags"> 
                 <h3>${id.title.rendered}</h3>
               </div>
-              <p>${id.acf?.beskrivelse || ""}</p>
-              <p>${id.acf?.tilkob || ""}</p>
+              <p>${id.acf.beskrivelse || ""}</p>
+              <p>${id.acf.tilkob || ""}</p>
             </div> 
             <div class="foodPrice"> 
-              <h3>${id.acf?.pris || "?"},-</h3>
+              <h3>${id.acf.pris || "?"},-</h3>
             </div>
           </div>
         `;
