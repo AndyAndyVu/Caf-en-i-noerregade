@@ -220,12 +220,6 @@ button {
   border-color: transparent;
 }
 
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-}
 /* Forside */
 /*  */
 .mainForside{
@@ -374,4 +368,29 @@ img {
 .menu-text p {
   margin-bottom: var(--mobile-spacing-sm);
   font-size: var(--mobile-body);
+}
+
+/* Hvem vi er */
+
+.container-hvem {
+  margin-left: var(--mobile-spacing-sm);
+  margin-right: var(--mobile-spacing-sm);
+}
+
+.hvem-text h1 {
+  font-size: var(--mobile-h1);
+  margin-top: var(--mobile-spacing-lg);
+  margin-bottom: var(--mobile-spacing-sm);
+}
+
+.hvem-text p {
+  font-size: var(--mobile-body);
+  margin-bottom: var(--mobile-spacing-sm);
+}
+
+.hvem-text img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
