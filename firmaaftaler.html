@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="./assets/js/navMenu.js" defer></script>
+    <meta name="SKRIV SEO HER" content="SKRIV SEO HER" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="logo" href="./index.html">
+          <span class="logoText">Caféen <br />i Nørregade</span>
+          <img
+            class="logoSVG"
+            src="./assets/img/Logo Coffee Heart.svg"
+            alt="Logo Coffee Heart"
+          />
+        </a>
+        <button class="menuButton">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="menuContainer">
+          <li><a href="./index.html">Forside</a></li>
+          <li><a href="./menu.html">Menu</a></li>
+          <li><a href="./socialVirksomhed.html">Social Ansvar</a></li>
+
+          <details>
+            <summary>Mad Med Omtanke</summary>
+            <li><a href="./madMedKærlighed.html">Mad Med Kærlighed</a></li>
+            <li><a href="./Leverandør.html">Leverandør</a></li>
+          </details>
+
+          <details>
+            <summary>Booking</summary>
+            <li><a href="./Arrangementer.html">Arrangementer</a></li>
+            <li><a href="./Firmaaftaler.html">Firmaaftaler</a></li>
+          </details>
+
+          <details>
+            <summary>Om Os</summary>
+            <li><a href="./Kontakt.html">Kontakt</a></li>
+            <li><a href="./Blogs.html">Blogs</a></li>
+          </details>
+        </ul>
+        <div class="menuOnActiveBlur"></div>
+      </nav>
+    </header>
+    <main>
+      <div class="firma-container">
+        <div class="firma-text">
+          <h1>
+            Et samarbejde der smager <br />
+            godt og jeg gør godt
+          </h1>
+          <p>
+            Vil din virksomhed tilbyde medarbejderne noget<br />
+            særligt og samtidig støtte et socialt formål?<br />
+            Hos Caféen i Nørregade laver vi ikke bare god mad <br />og kaffe, vi
+            gør det med hjertet.
+          </p>
+
+          <p>
+            Vi tilbyder fleksible firmaaftaler, der kan dække alt<br />
+            fra daglig frokost, mødeforplejning, kaffeordninger<br />
+            og til mad ud af huset.
+          </p>
+
+          <p>
+            Vores mad er hjemmelavet og lavet fra bunden, og<br />
+            vi lægger vægt på smag, kvalitet og bæredygtighed.<br />
+            Ved at samarbejde med os er du med til at støtte<br />
+            unge mennesker i udsatte positioner og give dem <br />mulighed for
+            at udvikle sig gennem arbejde, ansvar <br />og fællesskab.
+          </p>
+
+          <p>
+            Aftalerne tilpasses jeres behov og budget, og vi <br />tager altid
+            gerne en snak om mulighederne.
+          </p>
+          <img src="./assets/img/Place Holder Handshake.jpg" alt="" />
+        </div>
+        <p>
+          Kontakt os via formularen for at høre mere <br />
+          eller få et uforpligtende tilbud.
+        </p>
+        <div class="form-container">
+          <form>
+            <div class="formular-container">
+              <div class="formular-navn">
+                <label for="fornavn">Fornavn</label>
+                <input type="text" id="fornavn" placeholder="Pia" />
+              </div>
+              <div class="formular-efternavn">
+                <label for="efternavn">Efternavn</label>
+                <input type="text" id="efternavn" placeholder="Efternavn" />
+              </div>
+            </div>
+
+            <div class="formular-mail">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="post@no76.dk" />
+            </div>
+
+            <div class="formular-besked">
+              <label for="besked">Besked</label>
+              <textarea
+                id="besked"
+                placeholder="Skriv din besked her - spørgsmål, arrangementer og firmaaftaler"
+              ></textarea>
+            </div>
+
+            <button type="submit">Send besked</button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
