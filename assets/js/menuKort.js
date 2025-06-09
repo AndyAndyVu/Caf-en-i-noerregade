@@ -22,7 +22,7 @@ async function getPublicFoodItems() {
   }
 }
 
-// async for at hente drikkevarer
+// Henter drikkevarer async fra API'ET
 async function getPublicDrinkItems() {
   try {
     const response = await fetch(
@@ -34,3 +34,27 @@ async function getPublicDrinkItems() {
     console.log("det virker ikke", error);
   }
 }
+
+getPublicFoodItems().then(data => {
+  console.log("Madvarer:", data);
+});
+
+getPublicDrinkItems().then(data => {
+  console.log("Drikkevarer:", data);
+});
+
+getPublicFoodItems().then(data => {
+  const container = document.getElementById("food-container");
+  
+  data.forEach(item => {
+    container.innerHTML += `
+      <div class="food-item">
+        <h3>${item.title.rendered}</h3>
+         <p class="price">${item.class_list[5].replace("mad_kategori-","")}</p>
+        <p>${item.acf?.beskrivelse || "Ingen beskrivelse"}</p>
+        <p class="price">${item.acf?.pris || "Pris ikke angivet"}</p>
+        <p>${item.mad_kategori}</p>
+      </div>
+    `;
+  });
+});
