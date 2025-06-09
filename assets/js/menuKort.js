@@ -200,11 +200,11 @@ function renderDrinks(drinkCategories, drinkItems) {
               <div class="foodTitleTags"> 
                 <h3>${id.title.rendered}</h3>
               </div>
-              <p>${id.acf?.beskrivelse || ""}</p>
-              <p>${id.acf?.tilkob || ""}</p>
+              <p>${id.acf.beskrivelse || ""}</p>
+              <p>${id.acf.tilkob || ""}</p>
             </div> 
             <div class="foodPrice"> 
-              <h3>${id.acf?.pris || "?"},-</h3>
+              <h3>${id.acf.pris || "?"},-</h3>
             </div>
           </div>
         `;
