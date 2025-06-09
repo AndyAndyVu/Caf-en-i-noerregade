@@ -151,8 +151,8 @@ async function initFoods() {
     const foodItems = await getPublicFoodItems();
 
     // Logger de hentede data til konsollen for debugging
-    console.log(foodCategories);
-    console.log(foodItems);
+    console.log(foodCategories); // array af 5
+    console.log(foodItems); // array af 12
 
     // Kalder renderFoods med de hentede data
     renderFoods(foodCategories, foodItems);
