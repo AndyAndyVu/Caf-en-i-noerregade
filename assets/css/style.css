@@ -208,3 +208,20 @@ details li{
   font-size: var(--mobile-body);
   font-weight: var(--font-weight-regular);
 }
+
+
+/* MenuKort */
+/*  */
+
+/* Spisekort */
+.category{
+  margin-bottom: var(--mobile-spacing-sm);
+}
+.foodItem{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--mobile-spacing-md);
+}
+.foodTitleTags{
+  display: flex;
+}
