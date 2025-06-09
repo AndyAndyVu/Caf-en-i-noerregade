@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,23 +15,24 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
 }
-body p{
+body p {
   font-size: var(--mobile-body);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: "Quicksand", sans-serif;
   line-height: 1.2;
 }
-
 
 /*  */
 /* Variables */
 /*  */
 
 :root {
-
-/* Desktop Typography */
+  /* Desktop Typography */
   --desktop-h1: 48px;
   --desktop-h2: 36px;
   --desktop-h3: 28px;
@@ -40,7 +41,7 @@ h1, h2, h3, h4 {
   --desktop-breadcrumbs: 14px;
   --desktop-navbar-text: 18px;
 
-/* Mobile Typography */
+  /* Mobile Typography */
   --mobile-h1: 24px;
   --mobile-h2: 22px;
   --mobile-h3: 20px;
@@ -49,43 +50,42 @@ h1, h2, h3, h4 {
   --mobile-breadcrumbs: 12px;
   --mobile-navbar-text: 16px;
 
-/* Desktop and Mobile Typography */
+  /* Desktop and Mobile Typography */
   --cta-DeskAndMobile: 18px;
   --smallText-DeskAndMobile: 14px;
 
-/* Font weights */
+  /* Font weights */
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
-/* Colors */
-  --color-pink: #FAD6F4;
-  --color-lime-green: #D0F4D0;
-  --color-light-blue: #C5E1FB;
-  --color-dark-green: #006A4E;
-  --color-white: #FFFFFF;
+  /* Colors */
+  --color-pink: #fad6f4;
+  --color-lime-green: #d0f4d0;
+  --color-light-blue: #c5e1fb;
+  --color-dark-green: #006a4e;
+  --color-white: #ffffff;
   --color-black: #000000;
 
-/* Desktop Spacing */
+  /* Desktop Spacing */
   --desktop-spacing-sm: 8px;
   --desktop-spacing-md: 16px;
   --desktop-spacing-lg: 32px;
   --desktop-spacing-xl: 64px;
 
-/* Mobile Spacing */
+  /* Mobile Spacing */
   --mobile-spacing-sm: 8px;
-  --mobile-spacing-md: 16px; 
+  --mobile-spacing-md: 16px;
   --mobile-spacing-lg: 24px;
   --mobile-spacing-xl: 32px;
 
-/* Desktop Margins */
+  /* Desktop Margins */
   --desktop-margin-md: 144px;
   --desktop-margin-lg: 320px;
 
-/* Mobile Margins */
+  /* Mobile Margins */
   --mobile-margin: 20px;
-  
 }
 
 /*  */
@@ -106,7 +106,7 @@ nav {
   justify-content: space-between;
 }
 
-.logo{
+.logo {
   position: relative;
   text-decoration: none;
 }
@@ -125,7 +125,7 @@ nav {
   top: 0;
 }
 
-.menuButton{
+.menuButton {
   all: unset;
   cursor: pointer;
   z-index: 1000;
@@ -138,7 +138,7 @@ nav {
 
   display: flex;
   align-items: center;
-  
+
   font-size: 30px;
 }
 
@@ -179,23 +179,23 @@ nav {
   text-decoration: none;
   color: var(--color-black);
 }
-.menuOnActiveBlur{
+.menuOnActiveBlur {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(4px);  
+  backdrop-filter: blur(4px);
   width: 100vw;
   height: 100vh;
 
   opacity: 0;
   transition: 0.3s ease-in-out;
 }
-.blurActive{
+.blurActive {
   opacity: 1;
 }
-summary{
+summary {
   list-style: none;
   display: inline-flex;
   cursor: pointer;
@@ -208,7 +208,7 @@ details[open] summary::after {
   content: "▾";
 }
 
-details li{
+details li {
   font-size: var(--mobile-body);
   font-weight: var(--font-weight-regular);
 }
@@ -225,28 +225,34 @@ button {
 
 /* Forside */
 /*  */
-.mainForside{
+.mainForside {
   margin-inline: 20px;
 }
-.mainForside h1, h2, h3, h4, p, .velkommenImg, .fepForside article,
-.menuCardForside{
+.mainForside h1,
+h2,
+h3,
+h4,
+p,
+.velkommenImg,
+.fepForside article,
+.menuCardForside {
   margin-bottom: var(--mobile-spacing-md);
 }
-.heroForside{
+.heroForside {
   margin-top: var(--mobile-margin);
   margin-bottom: var(--mobile-margin);
 }
 
 /* Hero Section */
-.heroForside{
+.heroForside {
   text-align: center;
 }
 /* Velkommen section */
-.velkommenImgContainer{
+.velkommenImgContainer {
   display: flex;
   justify-content: center;
 }
-.velkommenImg{
+.velkommenImg {
   width: 60vw;
   height: auto;
   aspect-ratio: 1/1.2;
@@ -255,11 +261,11 @@ button {
   object-fit: cover;
 }
 /* Menu Card */
-.menuCardForsideImg{
+.menuCardForsideImg {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-.menuCardForsideContent{
+.menuCardForsideContent {
   padding: 20px;
   background-color: var(--color-pink);
   border-bottom-left-radius: 10px;
@@ -267,48 +273,47 @@ button {
 }
 
 /*Focus Entry points*/
-.fepForside img{
+.fepForside img {
   border-radius: 10px;
 }
 
-
 /* Testimonials */
-.testimonials{
+.testimonials {
   background-image: url(../img/backgroundStemningTestimonials.svg);
   background-size: 100%;
 }
-.reviewText{
+.reviewText {
   font-size: var(--mobile-breadcrumbs);
   margin: 0;
 }
-.reviewRight{
+.reviewRight {
   display: flex;
   justify-content: right;
   position: relative;
 }
-.reviewBubbleRight{
+.reviewBubbleRight {
   max-width: fit-content;
   width: 80vw;
 }
-.reviewContentRight{
+.reviewContentRight {
   position: absolute;
   top: 20px;
   left: 85%;
   transform: translateX(-100%);
   width: 60vw;
-  }
+}
 
-.reviewLeft{ 
+.reviewLeft {
   display: flex;
   justify-content: left;
   position: relative;
 }
-.reviewBubbleLeft{
+.reviewBubbleLeft {
   max-width: fit-content;
   width: 70vw;
   transform: scaleX(-1);
 }
-.reviewContentLeft{
+.reviewContentLeft {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -350,7 +355,6 @@ button {
   margin-top: var(--mobile-spacing-lg);
   margin-bottom: var(--mobile-spacing-lg);
   display: block;
-
 }
 
 .menu-toggle {
@@ -451,7 +455,7 @@ button {
 
 .pic3,
 .pic4 {
-  margin-top: var(--desktop-spacing-lg)
+  margin-top: var(--desktop-spacing-lg);
 }
 
 .pic1,
@@ -465,7 +469,6 @@ button {
 .pic1 {
   grid-column: 1;
   grid-row: 1;
-
 }
 
 .pic2 {
@@ -518,143 +521,142 @@ p {
   width: 125px;
 }
 /* Mad med kærlighed */
-  .mad-container {
-    margin-right: 20px;
-    margin-left: 20px;
-  }
+.mad-container {
+  margin-right: 20px;
+  margin-left: 20px;
+}
 
-  .mad-container p {
-    font-size: var(--mobile-body);
-    margin-bottom: var(--mobile-spacing-sm);
-  }
+.mad-container p {
+  font-size: var(--mobile-body);
+  margin-bottom: var(--mobile-spacing-sm);
+}
 
-  .mad-container img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    margin-top: var(--mobile-spacing-lg);
-    margin-bottom: var(--mobile-spacing-xl);
+.mad-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin-top: var(--mobile-spacing-lg);
+  margin-bottom: var(--mobile-spacing-xl);
+}
 
-  }
+.mad-text h1 {
+  font-size: var(--mobile-h1);
+  margin-top: var(--mobile-spacing-xl);
+  margin-bottom: var(--mobile-spacing-xl);
+}
 
-  .mad-text h1 {
-    font-size: var(--mobile-h1);
-    margin-top: var(--mobile-spacing-xl);
-    margin-bottom: var(--mobile-spacing-xl);
-  }
+.menu-navigation {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  background-color: var(--color-pink);
+  border-radius: 10px;
+  padding-bottom: var(--mobile-spacing-sm);
+}
 
-  .menu-navigation {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    background-color: var(--color-pink);
-    border-radius: 10px;
-    padding-bottom: var(--mobile-spacing-sm);
-  }
+.menu-navigation img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
 
-  .menu-navigation img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-  }
+.menu-navigation h2 {
+  font-size: var(--mobile-h2);
+  margin-bottom: var(--mobile-spacing-sm);
+}
 
-  .menu-navigation h2 {
-    font-size: var(--mobile-h2);
-    margin-bottom: var(--mobile-spacing-sm);
-  }
+.menu-navigation p,
+h2 {
+  margin-left: 40px;
+  margin-right: 40px;
+}
 
-  .menu-navigation p,
-  h2 {
-    margin-left: 40px;
-    margin-right: 40px;
-  }
+.menu-navigation a {
+  text-decoration: none;
+  color: var(--color-black);
+}
 
-  .menu-navigation a {
-    text-decoration: none;
-    color: var(--color-black);
-  }
+.img-center {
+  text-align: center;
+}
 
-  .img-center {
-    text-align: center;
-  }
+/* Arrangmenter */
+.container-arrang {
+  margin-left: var(--mobile-spacing-sm);
+  margin-right: var(--mobile-spacing-sm);
+}
 
-    /* Arrangmenter */
-    .container-arrang {
-      margin-left: var(--mobile-spacing-sm);
-      margin-right: var(--mobile-spacing-sm);
-    }
-  
-    .container-arrang img {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-width: 100%;
-    }
-  
-    .arrang-text h1 {
-      font-size: var(--mobile-h1);
-      margin-top: var(--mobile-spacing-lg);
-      margin-bottom: var(--mobile-spacing-lg);
-    }
-  
-    .arrang-text p {
-      font-size: var(--mobile-body);
-      margin-bottom: var(--mobile-spacing-md);
-    }
-  
-    .form-container {
-      background-color: var(--color-pink);
-      padding: 20px;
-      border-radius: 15px;
-      max-width: 500px;
-    }
-  
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .formular-container {
-      display: flex;
-      gap: var(--mobile-spacing-sm);
-    }
-  
-    .formular-navn,
-    .formular-efternavn,
-    .formular-mail,
-    .formular-besked {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: var(--mobile-spacing-md);
-    }
-  
-    .formular-navn,
-    .formular-efternavn {
-      flex: 1 1 45%;
-      /* Gør at de deler pladsen 50/50, men kan også bryde ned */
-      min-width: 100px;
-    }
-  
-    input,
-    textarea {
-      padding: 8px;
-      border: 2px solid #000;
-      border-radius: 2px;
-    }
-  
-    button {
-      padding: 10px;
-      background-color: var(--color-dark-green);
-      color: white;
-      font-size: var(--cta-DeskAndMobile);
-      border-radius: 25px;
-    }
+.container-arrang img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
 
-    /* Firmaaftaler */
+.arrang-text h1 {
+  font-size: var(--mobile-h1);
+  margin-top: var(--mobile-spacing-lg);
+  margin-bottom: var(--mobile-spacing-lg);
+}
+
+.arrang-text p {
+  font-size: var(--mobile-body);
+  margin-bottom: var(--mobile-spacing-md);
+}
+
+.form-container {
+  background-color: var(--color-pink);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 500px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formular-container {
+  display: flex;
+  gap: var(--mobile-spacing-sm);
+}
+
+.formular-navn,
+.formular-efternavn,
+.formular-mail,
+.formular-besked {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--mobile-spacing-md);
+}
+
+.formular-navn,
+.formular-efternavn {
+  flex: 1 1 45%;
+  /* Gør at de deler pladsen 50/50, men kan også bryde ned */
+  min-width: 100px;
+}
+
+input,
+textarea {
+  padding: 8px;
+  border: 2px solid #000;
+  border-radius: 2px;
+}
+
+button {
+  padding: 10px;
+  background-color: var(--color-dark-green);
+  color: white;
+  font-size: var(--cta-DeskAndMobile);
+  border-radius: 25px;
+}
+
+/* Firmaaftaler */
 .firma-container {
   margin-right: var(--mobile-spacing-sm);
   margin-left: var(--mobile-spacing-sm);
