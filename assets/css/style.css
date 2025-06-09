@@ -793,3 +793,24 @@ button {
   font-size: var(--cta-DeskAndMobile);
   border-radius: 25px;
 }
+/* Social virksomhed */
+
+.container-social {
+  margin-left: var(--mobile-spacing-sm);
+  margin-right: var(--mobile-spacing-sm);
+}
+
+.social h1,
+h2,
+h3,
+p {
+  margin-bottom: var(--mobile-spacing-sm);
+}
+
+.social-pic {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: var(--desktop-spacing-lg);
+}
