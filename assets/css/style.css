@@ -653,3 +653,143 @@ p {
       font-size: var(--cta-DeskAndMobile);
       border-radius: 25px;
     }
+
+    /* Firmaaftaler */
+.firma-container {
+  margin-right: var(--mobile-spacing-sm);
+  margin-left: var(--mobile-spacing-sm);
+}
+
+.firma-text h1 {
+  font-size: var(--mobile-h1);
+  margin-bottom: var(--mobile-spacing-lg);
+}
+
+.firma-text p {
+  font-size: var(--mobile-body);
+  margin-bottom: var(--mobile-spacing-sm);
+}
+
+.firma-text img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+.form-container {
+  background-color: var(--color-pink);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 500px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formular-container {
+  display: flex;
+  gap: var(--mobile-spacing-sm);
+}
+
+.formular-navn,
+.formular-efternavn,
+.formular-mail,
+.formular-besked {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--mobile-spacing-md);
+}
+
+.formular-navn,
+.formular-efternavn {
+  flex: 1 1 45%;
+  /* Gør at de deler pladsen 50/50, men kan også bryde ned */
+  min-width: 100px;
+}
+
+input,
+textarea {
+  padding: 8px;
+  border: 2px solid #000;
+  border-radius: 2px;
+}
+
+button {
+  padding: 10px;
+  background-color: var(--color-dark-green);
+  color: white;
+  font-size: var(--cta-DeskAndMobile);
+  border-radius: 25px;
+}
+/* Firmaaftaler */
+.firma-container {
+  margin-right: var(--mobile-spacing-sm);
+  margin-left: var(--mobile-spacing-sm);
+}
+
+.firma-text h1 {
+  font-size: var(--mobile-h1);
+  margin-bottom: var(--mobile-spacing-lg);
+}
+
+.firma-text p {
+  font-size: var(--mobile-body);
+  margin-bottom: var(--mobile-spacing-sm);
+}
+
+.firma-text img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+
+.form-container {
+  background-color: var(--color-pink);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 500px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formular-container {
+  display: flex;
+  gap: var(--mobile-spacing-sm);
+}
+
+.formular-navn,
+.formular-efternavn,
+.formular-mail,
+.formular-besked {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--mobile-spacing-md);
+}
+
+.formular-navn,
+.formular-efternavn {
+  flex: 1 1 45%;
+  /* Gør at de deler pladsen 50/50, men kan også bryde ned */
+  min-width: 100px;
+}
+
+input,
+textarea {
+  padding: 8px;
+  border: 2px solid #000;
+  border-radius: 2px;
+}
+
+button {
+  padding: 10px;
+  background-color: var(--color-dark-green);
+  color: white;
+  font-size: var(--cta-DeskAndMobile);
+  border-radius: 25px;
+}
