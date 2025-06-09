@@ -1,64 +1,3 @@
-// const domain = "https://www.huyvu.dk/";
-// const postsEndpointMad = "wp-json/wp/v2/madret";
-// const postsEndpointDrikke = "wp-json/wp/v2/drikkevare";
-// const morePages = "?per_page=25";
-// // per_page er en parameter der fortæller hvor mange opskrifter skal vises på et array. Wordpress kan maks have 10 opskrifter i et array, derfor var vi nød til tilføje denne for at vise alle 25.
-// const getRealImageUrls = "&acf_format=standard";
-
-// async function getPublicFoodItems() {
-//   // Async gør funktionen asynkron, så den venter på at dataene er hentet.
-//   try {
-//     const response = await fetch(
-//       domain + postsEndpointMad + morePages + getRealImageUrls
-//     );
-//     // response er et objekt fordi fetch() returnerer et objekt. Man kan også sige at domain + postEndPoint er vores metadata og data fra vores API. Await gør at vi venter på at dataene er hentet.
-
-//     const foodItems = await response.json();
-//     return foodItems;
-//     // Vi konvertere vores data til JSON og får vores opskrifter ud af det. Altså et objekt
-//   } catch (error) {
-//     console.log("det virker ikke", error);
-//     // Hvis der er en fejl, så log den i konsollen.
-//   }
-// }
-
-// // Henter drikkevarer async fra API'ET
-// async function getPublicDrinkItems() {
-//   try {
-//     const response = await fetch(
-//       domain + postsEndpointDrikke + morePages + getRealImageUrls
-//     );
-//     const drinkItems = await response.json();
-//     return drinkItems;
-//   } catch (error) {
-//     console.log("det virker ikke", error);
-//   }
-// }
-
-// getPublicFoodItems().then(data => {
-//   console.log("Madvarer:", data);
-// });
-
-// getPublicDrinkItems().then(data => {
-//   console.log("Drikkevarer:", data);
-// });
-
-// getPublicFoodItems().then(data => {
-//   const container = document.getElementById("food-container");
-  
-//   data.forEach(item => {
-//     container.innerHTML += `
-//       <div class="food-item">
-//         <h3>${item.title.rendered}</h3>
-//          <p class="price">${item.class_list[5].replace("mad_kategori-","")}</p>
-//         <p>${item.acf?.beskrivelse || "Ingen beskrivelse"}</p>
-//         <p class="price">${item.acf?.pris || "Pris ikke angivet"}</p>
-//         <p>${item.mad_kategori}</p>
-//       </div>
-//     `;
-//   });
-// });
-
 const domain = "https://www.huyvu.dk/";
 
 // Endpoints for madretter og drikkevarer
@@ -74,17 +13,18 @@ const postsEndpointMadKategori = "wp-json/wp/v2/mad_kategori";
 const postsEndpointDrikkeKategori = "wp-json/wp/v2/drikke_kategori";
 
 // Html element hvor vi indsætter vores resultater
-const resultEl = document.querySelector(".results");
+const madContainer = document.getElementById("mad-container");
+const drikkeContainer = document.getElementById("drikke-container");
 
-// ! Mangler at lave tags om til emojis
-// // Emoji-ikon map til tags
-// const tagIcons = {
-//   "Vegansk": "🌱",
-//   "Børnevenlig": "🧸",
-//   "Glutenfri": "🌾",
-//   "Caféens anbefaling": "👍",
-//   "Mest populære": "⭐"
-// };
+// Mangler at lave tags om til emojis
+// Emoji-ikon map til tags
+const tagIcons = {
+  "Vegansk": "🌱",
+  "Børnevenlig": "🧸",
+  "Glutenfri": "🌾",
+  "Caféens Anbefaling": "👍",
+  "Mest populære": "⭐"
+};
 
 // fetch for at hente madkategorier
 async function getPublicFoodCategories() {
@@ -136,12 +76,12 @@ async function getPublicDrinkItems() {
 
 // Render mad og madkategorier
 function renderFoods(foodCategories, foodItems) {
-  // Tømmer resultEl for tidligere resultater
-  resultEl.innerHTML = "";
+  // Tømmer madContainer for tidligere resultater
+  madContainer.innerHTML = "";
 
   foodCategories.forEach((category) => {
-    // innerHTML ind i resultEl for hver mad kategori fx. "Snacks", "Morgenmad", osv.
-    resultEl.innerHTML += `
+    // innerHTML ind i madContainer for hver mad kategori fx. "Snacks", "Morgenmad", osv.
+    madContainer.innerHTML += `
     <div class="category"> 
     <h2>${category.name}</h2>
     </div>
@@ -156,7 +96,7 @@ function renderFoods(foodCategories, foodItems) {
     // Hvis der er madretter i denne kategori, så render dem
     if (matchingIDs.length > 0) {
       matchingIDs.forEach((id) => {
-        resultEl.innerHTML += `
+        madContainer.innerHTML += `
         <div class="foodItem">
         <div class="foodText"> 
         <div class="foodTitleTags"> 
@@ -169,7 +109,16 @@ function renderFoods(foodCategories, foodItems) {
         // "?" og ":" er ternary operators der fungerer som en kortere if-else
         // enten ?joiner vi arrayet eller :retunere vi en tom string.
         -->
-        <p>${id.acf.tags.length > 0 ? id.acf.tags.join(" ") : ""}</p>
+        <p>          
+          ${
+            id.acf.tags && id.acf.tags.length > 0 //id.acf.tags vil nu vise emojis istedet for "Vegansk", "Glutenfri" da vi har erklæret en variabel længere oppe der siger vi skal erstatte det med emojojis.
+              ? id.acf.tags // Hele denne stykke kode checker vi om tag feltet findes og er den længere end 0 altså mindst et tag hvis ja så kører vi koden ellers vises tom felt som ""
+                .map(tag => tagIcons[tag]) // Det er her jeg snakker om "Vegansk, "Glutenfri" Vil blive til ikoner istedet for da vi erklæret en variabel længere oppe.
+                .filter(Boolean) // Den sikrer at vi kun får emojis vist, hvis du fx skriver forkert navn i const og den hedder noget andet på websitet vil den ikke vises.(Fx Vegansk skal staves ensartet begge stedet før emojis erstatter/vises) Hvis vi ikke havde dette, ville der stå undefined. Hvis de var skrevet forkert.
+                .join(" ") // Her siger vi bare ikoner skal ind med mellemrum da vi skriver " " <-  med spacing 
+            : ""
+          }
+        </p>
         </div>
         <p>${id.acf.beskrivelse}</p>
         </div> 
@@ -180,7 +129,7 @@ function renderFoods(foodCategories, foodItems) {
         `;
       });
     } else {
-      resultEl.innerHTML += `<p>Fejl ingen elementer i denne kategori.</p>`;
+      madContainer.innerHTML += `<p>Fejl ingen elementer i denne kategori.</p>`;
     }
   });
 }
@@ -201,15 +150,15 @@ async function initFoods() {
     renderFoods(foodCategories, foodItems);
   } catch (error) {
     console.log(error);
-    resultEl.innerHTML = `Der gik noget galt3`;
+    madContainer.innerHTML = `Der gik noget galt3`;
   }
 }
 // Kører renderFoods funktionen
-initFoods();
+// initFoods();
 
 // ! Vi har ikke lavet drinks endnu, derfor er denne kode kommenteret ud.
 // ! Fjernelse af kommentarer vil køre drinks funktionen og break pga drinks ikke er lavet endnu.
-/* 
+
 // Her laver vi en asynkron funktion initDrinks for at hente drikkevarer og kategorier
 // Det kan  vi gøre fordi vi har returnet de data fra vores fetch funktioner.
 async function initDrinks() {
@@ -226,9 +175,56 @@ async function initDrinks() {
     renderDrinks(drinkCategories, drinkItems);
   } catch (error) {
     console.log(error);
-    resultEl.innerHTML = `Der gik noget galt`;
+    drikkeContainer.innerHTML = `Der gik noget galt`;
   }
 }
-// Kører renderDrinks funktionen
+function renderDrinks(drinkCategories, drinkItems) {
+  drikkeContainer.innerHTML = "";
+
+  drinkCategories.forEach((category) => {
+    drikkeContainer.innerHTML += `
+      <div class="category"> 
+        <h2>${category.name}</h2>
+      </div>
+    `;
+
+    const matchingIDs = drinkItems.filter((drinkItem) =>
+      drinkItem.drikke_kategori.includes(category.id)
+    );
+
+    if (matchingIDs.length > 0) {
+      matchingIDs.forEach((id) => {
+        drikkeContainer.innerHTML += `
+          <div class="foodItem">
+            <div class="foodText"> 
+              <div class="foodTitleTags"> 
+                <h3>${id.title.rendered}</h3>
+              </div>
+              <p>${id.acf?.beskrivelse || ""}</p>
+              <p>${id.acf?.tilkob || ""}</p>
+            </div> 
+            <div class="foodPrice"> 
+              <h3>${id.acf?.pris || "?"},-</h3>
+            </div>
+          </div>
+        `;
+      });
+    } else {
+      drikkeContainer.innerHTML += `<p>Fejl - ingen elementer i denne kategori.</p>`;
+    }
+  });
+}
+
+// vis eller skjul sektioner
+function visMad() {
+  madContainer.style.display = "block";
+  drikkeContainer.style.display = "none";
+}
+function visDrikke() {
+  madContainer.style.display = "none";
+  drikkeContainer.style.display = "block";
+}
+
+// Start side
+initFoods();
 initDrinks();
-*/

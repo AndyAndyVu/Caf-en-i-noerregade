@@ -208,3 +208,37 @@ details li{
   font-size: var(--mobile-body);
   font-weight: var(--font-weight-regular);
 }
+
+/* MenuKort */
+/*  */
+
+/* Spisekort */
+.category {
+  margin-bottom: var(--mobile-spacing-sm);
+}
+
+.foodItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--mobile-spacing-md);
+}
+
+.foodTitleTags {
+  display: flex;
+}
+
+/* Drikke og mad sektion */
+.menu-toggle {
+  text-align: center;
+  margin: 20px;
+}
+
+.menu-toggle button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.menu-section {
+  margin-top: 30px;
+}
