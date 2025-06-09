@@ -20,7 +20,7 @@ const drikkeContainer = document.getElementById("drikke-container");
 // Emoji-ikon map til tags
 const tagIcons = {
   Vegansk: "🌱",
-  Børnevenlig: "🧸",
+  Børnevenlig: "🧒",
   Glutenfri: "🌾",
   "Caféens Anbefaling": "👍",
   "Mest populære": "⭐",
@@ -110,23 +110,24 @@ function renderFoods(foodCategories, foodItems) {
         // enten ?joiner vi arrayet eller :retunere vi en tom string.
         -->
         <p>          
-          ${
-            id.acf.tags && id.acf.tags.length > 0 //id.acf.tags vil nu vise emojis istedet for "Vegansk", "Glutenfri" da vi har erklæret en variabel længere oppe der siger vi skal erstatte det med emojojis.
+          ${  // id.acf.tags.length > 0 hvis den er over 0 kører vi tenary operators som er "?", hvis den er under 0 vil det bare bilve en tom string ""
+              id.acf.tags.length > 0 //id.acf.tags vil nu vise emojis istedet for "Vegansk", "Glutenfri" da vi har erklæret en variabel længere oppe der siger vi skal erstatte det med emojojis.
               ? id.acf.tags // Hele denne stykke kode checker vi om tag feltet findes og er den længere end 0 altså mindst et tag hvis ja så kører vi koden ellers vises tom felt som ""
                   .map((tag) => tagIcons[tag]) // Det er her jeg snakker om "Vegansk, "Glutenfri" Vil blive til ikoner istedet for da vi erklæret en variabel længere oppe.
                   .filter(Boolean) // Den sikrer at vi kun får emojis vist, hvis du fx skriver forkert navn i const og den hedder noget andet på websitet vil den ikke vises.(Fx Vegansk skal staves ensartet begge stedet før emojis erstatter/vises) Hvis vi ikke havde dette, ville der stå undefined. Hvis de var skrevet forkert.
                   .join(" ") // Her siger vi bare ikoner skal ind med mellemrum da vi skriver " " <-  med spacing
-              : ""
+              : "" // Hvis tags.length er under 0 laver vi tenary operator som giver en tom string.
           }
         </p>
         </div>
         <p>${id.acf.beskrivelse}</p>
         
         <!-- 
-        Javascript line breaks is \n but we want to replace it with html line breaks <br>. 
-        /.../ is regular expression tool to find something specific, in our case we look for \n hence the /\n/
-        then we write g in the end for it to find and replace all instances of \n with <br> oterwide its only the first \n that would be replaced.
-        Forexample: -ost 15kr\n-knas 10kr\n-smør 5kr, would look like this -ost 15kr<br>-knas 10kr\n-smør 5kr without g. 
+        Javascript linjeskift er \n, men vi vil erstatte det med HTML-linjeskift <br>.
+        /.../ er en regular expression (mønstersøgning), og i dette tilfælde leder vi efter \n - derfor skriver vi /\n/.
+        Bogstavet g til sidst står for "global", hvilket betyder, at alle forekomster af \n bliver fundet og erstattet - ikke kun den første.
+        Eksempel: -ost 15kr\n-knas 10kr\n-smør 5kr, ville ellers blive til -ost 15kr<br>-knas 10kr\n-smør 5kr uden g.
+        Man kunne også skrive <br> i wordpress under Tilkøb, men vi har valgt at gøre det på denne måde.
         -->
         <p>${id.acf.tilkob.replace(/\n/g, "<br>")}</p> 
         </div> 
@@ -161,12 +162,6 @@ async function initFoods() {
     madContainer.innerHTML = `Der gik noget galt3`;
   }
 }
-// Kører renderFoods funktionen
-// initFoods();
-
-// ! Vi har ikke lavet drinks endnu, derfor er denne kode kommenteret ud.
-// ! Fjernelse af kommentarer vil køre drinks funktionen og break pga drinks ikke er lavet endnu.
-
 // Her laver vi en asynkron funktion initDrinks for at hente drikkevarer og kategorier
 // Det kan  vi gøre fordi vi har returnet de data fra vores fetch funktioner.
 async function initDrinks() {
@@ -208,11 +203,11 @@ function renderDrinks(drinkCategories, drinkItems) {
               <div class="foodTitleTags"> 
                 <h3>${id.title.rendered}</h3>
               </div>
-              <p>${id.acf.beskrivelse || ""}</p>
-              <p>${id.acf.tilkob || ""}</p>
+              <p>${id.acf.beskrivelse}</p>
+              <p>${id.acf.tilkob}</p>
             </div> 
             <div class="foodPrice"> 
-              <h3>${id.acf.pris || "?"},-</h3>
+              <h3>${id.acf.pris},-</h3>
             </div>
           </div>
         `;
