@@ -210,6 +210,22 @@ details li{
   font-weight: var(--font-weight-regular);
 }
 
+/* GENEREL */
+button {
+  padding: 10px;
+  background-color: var(--color-dark-green);
+  color: white;
+  font-size: var(--cta-DeskAndMobile);
+  border-radius: 25px;
+  border-color: transparent;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
 /* Forside */
 /*  */
 .mainForside{
@@ -222,20 +238,6 @@ details li{
 .heroForside{
   margin-top: var(--mobile-margin);
   margin-bottom: var(--mobile-margin);
-}
-button {
-  padding: 10px;
-  background-color: var(--color-dark-green);
-  color: white;
-  font-size: var(--cta-DeskAndMobile);
-  border-radius: 25px;
-  border-color: transparent;
-}
-img{
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
 }
 
 /* Hero Section */
@@ -314,4 +316,62 @@ img{
   top: 20px;
   left: 20px;
   width: 60vw;
+}
+
+/* MenuKort */
+/*  */
+
+/* Spisekort */
+.category {
+  margin-bottom: var(--mobile-spacing-sm);
+}
+
+.foodItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--mobile-spacing-md);
+}
+
+.foodTitleTags {
+  display: flex;
+}
+
+/* Drikke og mad sektion */
+
+.menu-top h1 {
+  text-align: center;
+  font-size: var(--mobile-h1);
+  margin-top: var(--mobile-spacing-lg);
+}
+
+.menu-top img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2/1;
+  object-fit: cover;
+  object-position: 0% 85%;
+  margin-top: var(--mobile-spacing-lg);
+  margin-bottom: var(--mobile-spacing-lg);
+  display: block;
+
+}
+
+.menu-toggle {
+  text-align: center;
+  margin: 20px;
+}
+
+.menu-toggle button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.menu-section {
+  margin-top: 30px;
+}
+
+.menu-text p {
+  margin-bottom: var(--mobile-spacing-sm);
+  font-size: var(--mobile-body);
 }

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="./assets/js/menuKort.js" defer></script>
+    <script src="./assets/js/navMenu.js" defer></script>
+    <meta name="SKRIV SEO HER" content="SKRIV SEO HER" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="logo" href="./index.html">
+          <span class="logoText">Caféen <br />i Nørregade</span>
+          <img
+            class="logoSVG"
+            src="./assets/img/Logo Coffee Heart.svg"
+            alt="Logo Coffee Heart"
+          />
+        </a>
+        <button class="menuButton">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="menuContainer">
+          <li><a href="./index.html">Forside</a></li>
+          <li><a href="./menu.html">Menu</a></li>
+          <li><a href="./socialVirksomhed.html">Social Ansvar</a></li>
+
+          <details>
+            <summary>Mad Med Omtanke</summary>
+            <li><a href="./madMedKærlighed.html">Mad Med Kærlighed</a></li>
+            <li><a href="./Leverandør.html">Leverandør</a></li>
+          </details>
+
+          <details>
+            <summary>Booking</summary>
+            <li><a href="./Arrangementer.html">Arrangementer</a></li>
+            <li><a href="./Firmaaftaler.html">Firmaaftaler</a></li>
+          </details>
+
+          <details>
+            <summary>Om Os</summary>
+            <li><a href="./Kontakt.html">Kontakt</a></li>
+            <li><a href="./Blogs.html">Blogs</a></li>
+          </details>
+        </ul>
+        <div class="menuOnActiveBlur"></div>
+      </nav>
+    </header>
+    <div class="menu-top">
+      <h1>Spisekort</h1>
+      <img src="./assets/img/Place Holder Sandwhich.jpg" alt="" />
+    </div>
+    <div class="menu-toggle">
+      <button onclick="visMad()">Spisekort</button>
+      <button onclick="visDrikke()">Drikkekort</button>
+    </div>
+    <div class="menu-text">
+      <p>
+        🌱 Vegansk<br />
+        🌾 Glutenfri<br />
+        👍 Anbefalet af caféen<br />
+        ⭐ Mest populære <br />
+        🧒 Børnevenlig
+      </p>
+      <p>*Vi tilbyder 15% studierabat</p>
+    </div>
+
+    <div id="mad-container" class="menu-section"></div>
+    <div id="drikke-container" class="menu-section" style="display: none"></div>
+
+    <article class="fepSocialVirksomhed">
+      <img src="./assets/img/Place Holder Barista tattoo.JPG" alt="" />
+      <h2>Social virksomhed</h2>
+      <p>
+        Vi er en cafe med et formål, en god kop kaffe er starten på noget
+        større. Lær mere om social virksomhed
+      </p>
+      <button>Læs om vores mål</button>
+    </article>
+    <article class="fepSocialVirksomhed">
+      <img src="./assets/img/Place Holder Barista tattoo.JPG" alt="" />
+      <h2>Arrangementer</h2>
+      <p>Vi sørger for maden til dit næste arrangement</p>
+      <button>Book til arrangementer</button>
+    </article>
+  </body>
+</html>
