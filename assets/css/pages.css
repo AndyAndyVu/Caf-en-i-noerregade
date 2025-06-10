@@ -242,6 +242,24 @@ textarea {
 
 
 /*  */
-/* Hvem vi er */
+/* Om os*/
 /*  */
+
+/* Hvem er vi */
+
+
 /* Blog */
+.blog-post{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  
+}
+.blog-post img{
+  width: 40vw;
+  aspect-ratio: 1.5/1;
+}
+
+
+/* Blog indlæg */
