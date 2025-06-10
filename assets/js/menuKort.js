@@ -222,10 +222,14 @@ function renderDrinks(drinkCategories, drinkItems) {
 function visMad() {
   madContainer.style.display = "block";
   drikkeContainer.style.display = "none";
+  document.getElementById("menu-text").style.display = "block"; // Vis tekst
+
 }
 function visDrikke() {
   madContainer.style.display = "none";
   drikkeContainer.style.display = "block";
+  document.getElementById("menu-text").style.display = "none"; // Skjul tekst
+
 }
 
 // Start side

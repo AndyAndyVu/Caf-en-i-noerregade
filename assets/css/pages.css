@@ -116,6 +116,11 @@
   object-position: center 25%;
 }
 
+.barrista-navigation {
+  display: flex;
+  justify-content: center;
+}
+
 
 /*  */
 /* Mad med kærlighed */
