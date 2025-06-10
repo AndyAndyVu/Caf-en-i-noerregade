@@ -91,6 +91,7 @@
 
 /* Drikke og mad sektion */
 .menu-top img {
+  aspect-ratio: 2/1;
   object-fit: cover;
   object-position: 0% 85%;
   display: block;
@@ -120,6 +121,7 @@
 /* Mad med kærlighed */
 /*  */
 .madMedKaerlighedCardImage img{ 
+  aspect-ratio: 1/1;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
@@ -134,35 +136,6 @@
 /*  */
 /* Leverandør */
 /*  */
-
-/* .container-leve {
-  margin-right: var(--mobile-spacing-sm);
-  margin-left: var(--mobile-spacing-sm);
-} */
-
-/* .lev-h1 {
-  display: flex;
-  justify-content: center;
-  margin-bottom: var(--mobile-spacing-xl);
-} */
-
-/* .lev-text h2 {
-  margin-bottom: var(--mobile-spacing-md);
-} */
-
-/* .lev-text p {
-  margin-bottom: var(--mobile-spacing-sm);
-} */
-
-/* .leverandør-pic {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  margin-bottom: var(--mobile-spacing-xl);
-  margin-top: var(--desktop-spacing-lg);
-} */
-
 .container-lev {
   background-color: var(--color-pink);
   display: grid;
