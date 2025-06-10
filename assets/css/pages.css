@@ -202,6 +202,12 @@
   grid-row: 3;
 }
 
+.mad-navigation {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: var(--color-pink);
+}
+
 
 /*  */
 /* Arrangmenter */
