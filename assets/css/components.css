@@ -108,6 +108,10 @@ nav {
   opacity: 1;
 }
 
+.menu-toggleZIndex{
+  z-index: 0 !important;;
+}
+
 summary {
   list-style: none;
   display: inline-flex;

@@ -98,6 +98,8 @@
 }
 
 .menu-toggle {
+  position: relative;
+  z-index: 1;
   gap: 20px;
   margin-bottom: var(--mobile-spacing-xl);
 }
