@@ -1,0 +1,146 @@
+/*  */
+/* Navbar */
+/*  */
+nav {
+  position: relative;
+  background-color: var(--color-pink);
+  height: 64px;
+  width: 100vw;
+  padding-inline: 20px;
+  padding-block: 5px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  position: relative;
+  text-decoration: none;
+}
+
+.logoText {
+  font-family: quicksand, sans-serif;
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+}
+
+.logoSVG {
+  height: 28px;
+  width: 24px;
+
+  position: absolute;
+  right: 9%;
+  top: 0;
+}
+
+.menuButton {
+  all: unset;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.fa-solid.fa-bars {
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  right: 20px;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 30px;
+}
+
+.menuContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding-inline: 20px;
+  padding-block: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  transform: translateX(100vw);
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+
+  background-color: var(--color-pink);
+  list-style-type: none;
+
+  font-size: var(--mobile-h4);
+  font-weight: var(--font-weight-bold);
+
+  border-left: 1px solid black;
+}
+
+.menuContainerActive {
+  transform: translate(35%, 0);
+}
+
+.menuContainer li a {
+  text-decoration: none;
+  color: var(--color-black);
+}
+
+.menuOnActiveBlur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  width: 100vw;
+  height: 100vh;
+
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+
+  display: none;
+}
+
+.blurActive {
+  opacity: 1;
+}
+
+summary {
+  list-style: none;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+summary::after {
+  content: "▸";
+  padding-left: 5px;
+}
+
+details[open] summary::after {
+  content: "▾";
+}
+
+details li {
+  font-size: var(--mobile-body);
+  font-weight: var(--font-weight-regular);
+}
+
+/*  */
+/* Button */
+/*  */
+
+button {
+  font-size: var(--cta-DeskAndMobile);
+  padding: 10px 20px;
+  background-color: var(--color-dark-green);
+  color: white;
+  font-size: var(--cta-DeskAndMobile);
+  border-radius: 25px;  
+  border: none;
+  cursor: pointer;
+}

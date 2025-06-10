@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/*  */
+/* Typography */
+/*  */
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+p {
+  font-size: var(--mobile-body);
+  max-width: 80ch;
+}
+
+h1, h2, h3, h4{
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.2;
+}
+h1 {
+  font-size: var(--mobile-h1);
+}
+h2 {
+  font-size: var(--mobile-h2);
+}
+h3 {
+  font-size: var(--mobile-h3);
+}
+h4 {
+  font-size: var(--mobile-h4);
+}
+
+
+/*  */
+/* Spacing & Layout */
+/*  */
+nav{
+  margin-bottom: var(--mobile-spacing-lg);
+}
+main {
+  margin-inline: 20px;
+}
+h1{
+  margin-block: var(--mobile-spacing-md);
+} 
+p, h2, h3, h4{
+  margin-bottom: var(--mobile-spacing-sm);
+}
+.container {
+  margin-bottom: var(--mobile-spacing-md);
+}
+section {
+  margin-bottom: var(--mobile-spacing-xl);
+}
+
+/*  */
+/* Global Styles */
+/*  */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.hero{
+  aspect-ratio: 2/1;
+}
+.borderRadius img{
+border-radius: 10px;
+}
+
+/*  */
+/* Utility classes */
+/*  */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+/*  */
+/* Variables */
+/*  */
+:root {
+  /* Desktop Typography */
+  --desktop-h1: 48px;
+  --desktop-h2: 36px;
+  --desktop-h3: 28px;
+  --desktop-h4: 22px;
+  --desktop-body: 18px;
+  --desktop-breadcrumbs: 14px;
+  --desktop-navbar-text: 18px;
+
+  /* Mobile Typography */
+  --mobile-h1: 24px;
+  --mobile-h2: 22px;
+  --mobile-h3: 20px;
+  --mobile-h4: 18px;
+  --mobile-body: 16px;
+  --mobile-breadcrumbs: 12px;
+  --mobile-navbar-text: 16px;
+
+  /* Desktop and Mobile Typography */
+  --cta-DeskAndMobile: 18px;
+  --smallText-DeskAndMobile: 14px;
+
+  /* Font weights */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Colors */
+  --color-pink: #fad6f4;
+  --color-lime-green: #d0f4d0;
+  --color-light-blue: #c5e1fb;
+  --color-dark-green: #006a4e;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  /* Desktop Spacing */
+  --desktop-spacing-sm: 8px;
+  --desktop-spacing-md: 16px;
+  --desktop-spacing-lg: 32px;
+  --desktop-spacing-xl: 64px;
+
+  /* Mobile Spacing */
+  --mobile-spacing-sm: 8px;
+  --mobile-spacing-md: 16px;
+  --mobile-spacing-lg: 24px;
+  --mobile-spacing-xl: 32px;
+
+  /* Desktop Margins */
+  --desktop-margin-md: 144px;
+  --desktop-margin-lg: 320px;
+
+  /* Mobile Margins */
+  --mobile-margin: 20px;
+}

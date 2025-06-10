@@ -52,43 +52,58 @@
         </ul>
         <div class="menuOnActiveBlur"></div>
       </nav>
+      <section class="menu-top text-center">
+        <h1>Spisekort</h1>
+        <img src="./assets/img/Place Holder Sandwhich.jpg" alt="" />
+      </section>
     </header>
-    <div class="menu-top">
-      <h1>Spisekort</h1>
-      <img src="./assets/img/Place Holder Sandwhich.jpg" alt="" />
-    </div>
-    <div class="menu-toggle">
-      <button onclick="visMad()">Spisekort</button>
-      <button onclick="visDrikke()">Drikkekort</button>
-    </div>
-    <div class="menu-text">
-      <p>
-        🌱 Vegansk<br />
-        🌾 Glutenfri<br />
-        👍 Anbefalet af caféen<br />
-        ⭐ Mest populære <br />
-        🧒 Børnevenlig
-      </p>
-      <p>*Vi tilbyder 15% studierabat</p>
-    </div>
+    <main>
+      <section>
+        <div class="menu-toggle flex-center">
+          <button onclick="visMad()">Spisekort</button>
+          <button onclick="visDrikke()">Drikkekort</button>
+        </div>
+      </section>
 
-    <div id="mad-container" class="menu-section"></div>
-    <div id="drikke-container" class="menu-section" style="display: none"></div>
+      <section>
+        <div class="menu-text">
+          <p>
+            🌱 Vegansk<br />
+            🌾 Glutenfri<br />
+            👍 Anbefalet af caféen<br />
+            ⭐ Mest populære <br />
+            🧒 Børnevenlig
+          </p>
+          <p>*Vi tilbyder 15% studierabat</p>
+        </div>
+      </section>
 
-    <article class="fepSocialVirksomhed">
-      <img src="./assets/img/Place Holder Barista tattoo.JPG" alt="" />
-      <h2>Social virksomhed</h2>
-      <p>
-        Vi er en cafe med et formål, en god kop kaffe er starten på noget
-        større. Lær mere om social virksomhed
-      </p>
-      <button>Læs om vores mål</button>
-    </article>
-    <article class="fepSocialVirksomhed">
-      <img src="./assets/img/Place Holder Barista tattoo.JPG" alt="" />
-      <h2>Arrangementer</h2>
-      <p>Vi sørger for maden til dit næste arrangement</p>
-      <button>Book til arrangementer</button>
-    </article>
+      <section>
+        <div id="mad-container" class="menu-section"></div>
+        <div
+          id="drikke-container"
+          class="menu-section"
+          style="display: none"
+        ></div>
+      </section>
+
+      <section>
+        <article class="container borderRadius">
+          <img src="./assets/img/Place Holder Barista tattoo.JPG" alt="" />
+          <h2>Vi går ind for bæredygtighed</h2>
+          <p>
+            Vores køkken serverer jer friske råvarer, hjemmelavet ingredienser
+            og noget til at slukke tørsten produceret med omtanke for klimaet.
+          </p>
+          <button>Vores bæredygtighed</button>
+        </article>
+        <article class="container borderRadius">
+          <img src="./assets/img/Place Holder Barista tattoo.JPG" alt="" />
+          <h2>Arrangementer</h2>
+          <p>Vi sørger for maden til dit næste arrangement</p>
+          <button>Book til arrangementer</button>
+        </article>
+      </section>
+    </main>
   </body>
 </html>
