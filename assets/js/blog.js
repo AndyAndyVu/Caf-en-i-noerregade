@@ -13,10 +13,13 @@ async function fetchBlogs() {
 
     blogIndlaeg.forEach((post) => {
       blogContainer.innerHTML += `
-        <article class="blog-post">
-          <img src="${post.acf.billede.sizes.medium}" alt="">
+        <article class="blog-post borderRadius">
+          <img  src="${post.acf.billede.sizes.medium}" alt="">
+          <div class="blog-content">
           <p>${post.acf["kategori-label"]} </p>
-          <h2>${post.title.rendered}</h2>
+          <h4>${post.title.rendered}</h4>
+          </div>
+          <p class="blog-dato"><i class="fa-regular fa-calendar"></i> ${post.acf.dato}</p>
         </article>
       `;
     });

@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <script src="./assets/js/blog.js" defer></script>
     <script src="./assets/js/navMenu.js" defer></script>
     <meta name="SKRIV SEO HER" content="SKRIV SEO HER" />
   </head>
@@ -54,44 +55,9 @@
       </nav>
     </header>
     <main>
-      <div class="kontakt-container">
-        <img src="./assets/img/Lokation til Café.png" alt="Caféens adresse" />
-        <p>Lokation: Rendsburggade 2, 9000 Aalborg</p>
-        <p>
-          Åbningstider: <br />Mandag, Tirsdag, Fredag 09-14 <br />
-          Lukket: <br />Onsdag, Torsdag, Lørdag, Søndag
-        </p>
-      </div>
-      <p>Mail: post@no76.dk</p>
-      <div class="form-container">
-        <form>
-          <div class="formular-container">
-            <div class="formular-navn">
-              <label for="fornavn">Fornavn</label>
-              <input type="text" id="fornavn" placeholder="Pia" />
-            </div>
-            <div class="formular-efternavn">
-              <label for="efternavn">Efternavn</label>
-              <input type="text" id="efternavn" placeholder="Efternavn" />
-            </div>
-          </div>
-
-          <div class="formular-mail">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="post@no76.dk" />
-          </div>
-
-          <div class="formular-besked">
-            <label for="besked">Besked</label>
-            <textarea
-              id="besked"
-              placeholder="Skriv din besked her - spørgsmål, arrangementer og firmaaftaler"
-            ></textarea>
-          </div>
-
-          <button type="submit">Send besked</button>
-        </form>
-      </div>
+      <h1 class="text-center">Nyheder & Blog</h1>
+      <button>Sortere</button>
+      <div id="blog-container"></div>
     </main>
   </body>
 </html>

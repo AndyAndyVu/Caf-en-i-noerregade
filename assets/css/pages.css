@@ -249,17 +249,39 @@ textarea {
 
 
 /* Blog */
-.blog-post{
+#blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.blog-post {
+  border: 2px solid var(--color-lime-green);
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-
-  
+  width: 100%;
 }
-.blog-post img{
-  width: 40vw;
+
+.blog-post img {
+  width: 100%;
   aspect-ratio: 1.5/1;
+  object-fit: cover;
+}
+.blog-content{
+  padding-inline: 20px;
+  padding-top: 10px;
+}
+.blog-content p{
+  display: inline-block;
+  background-color: var(--color-pink);
+  padding: 5px;
+  border-radius: 10px;
 }
 
+.blog-dato {
+  padding-inline: 20px;
+  margin-top: auto;
+}
 
 /* Blog indlæg */
