@@ -110,9 +110,8 @@ function renderFoods(foodCategories, foodItems) {
         // enten ?joiner vi arrayet eller :retunere vi en tom string.
         -->
         <p>          
-          ${
-            // id.acf.tags.length > 0 hvis den er over 0 kører vi tenary operators som er "?", hvis den er under 0 vil det bare bilve en tom string ""
-            id.acf.tags.length > 0 //id.acf.tags vil nu vise emojis istedet for "Vegansk", "Glutenfri" da vi har erklæret en variabel længere oppe der siger vi skal erstatte det med emojojis.
+          ${  // id.acf.tags.length > 0 hvis den er over 0 kører vi tenary operators som er "?", hvis den er under 0 vil det bare bilve en tom string ""
+              id.acf.tags.length > 0 //id.acf.tags vil nu vise emojis istedet for "Vegansk", "Glutenfri" da vi har erklæret en variabel længere oppe der siger vi skal erstatte det med emojojis.
               ? id.acf.tags // Hele denne stykke kode checker vi om tag feltet findes og er den længere end 0 altså mindst et tag hvis ja så kører vi koden ellers vises tom felt som ""
                   .map((tag) => tagIcons[tag]) // Det er her jeg snakker om "Vegansk, "Glutenfri" Vil blive til ikoner istedet for da vi erklæret en variabel længere oppe.
                   .filter(Boolean) // Den sikrer at vi kun får emojis vist, hvis du fx skriver forkert navn i const og den hedder noget andet på websitet vil den ikke vises.(Fx Vegansk skal staves ensartet begge stedet før emojis erstatter/vises) Hvis vi ikke havde dette, ville der stå undefined. Hvis de var skrevet forkert.
@@ -224,11 +223,13 @@ function visMad() {
   madContainer.style.display = "block";
   drikkeContainer.style.display = "none";
   document.getElementById("menu-text").style.display = "block"; // Vis tekst
+
 }
 function visDrikke() {
   madContainer.style.display = "none";
   drikkeContainer.style.display = "block";
   document.getElementById("menu-text").style.display = "none"; // Skjul tekst
+
 }
 
 // Start side
