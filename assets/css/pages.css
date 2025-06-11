@@ -295,26 +295,46 @@ textarea {
 footer {
   display: flex;
   flex-direction: column;
-  height: auto;
-  width: 100vw;
+  justify-content: center;
+  padding-block: 20px;
+  padding-inline: 40px;
   background-color: var(--color-lime-green);
 }
+.footer-top{
+  display: flex;
+  justify-content: center;
+}
+.footerKontakt{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.socials{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.socials .icons{
+  font-size: 3rem;
+}
 
-.footer-container {
+
+
+/* .footer-container {
   margin-right: 75px;
   margin-left: 75px;
-}
+} */
 
 footer img {
   width: 86px;
   height: 48px;
 }
 
-.footer-top, .åbningstider, .Kontakt-container, .Socials {
+/* .footer-top, .åbningstider {
   display: flex;
   justify-content: center;
   margin-top: var(--mobile-spacing-md)
-}
+} */
 
 /* .footer-text {
   align-items: center;
@@ -322,13 +342,13 @@ footer img {
 
 } */
 
-.åbningstider {
+/* .åbningstider {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: var(--mobile-spacing-sm);
 
-}
+} */
 
 
 /*.Socials {
@@ -339,15 +359,15 @@ footer img {
   margin-top: 10px;
 } */
 
-.Kontakt h2 {
+/* .Kontakt h2 {
   text-align: left;
-}
+} */
 
-.icons {
+/* .icons {
   display: flex;
   align-items: center;
   gap: 5px;
-}
+} */
 
 /* .Socials {
   display: flex;
