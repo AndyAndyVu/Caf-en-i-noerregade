@@ -85,6 +85,10 @@ img {
   border-radius: 10px;
 }
 
+iframe {
+  aspect-ratio: 1/1;
+}
+
 /*  */
 /* Utility classes */
 /*  */

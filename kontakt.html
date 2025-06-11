@@ -15,7 +15,6 @@
   <body>
     <header>
       <!-- Desktop Navbar -->
-      <!-- Desktop Navbar -->
       <nav class="navbar-desktop">
         <a class="logo" href="./index.html">
           <span class="logoText">Caféen <br />i Nørregade</span>
@@ -99,7 +98,15 @@
     </header>
     <main>
       <div class="kontakt-container">
-        <img src="./assets/img/Lokation til Café.png" alt="Caféens adresse" />
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2170.284086014006!2d9.92431117715287!3d57.046676991598304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4649332aad94b02b%3A0xda37ee1661ebae66!2sCafeen%20i%20Nørregade!5e0!3m2!1sen!2sdk!4v1749678485607!5m2!1sen!2sdk"
+          width="100%"
+          height="auto"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
         <p>Lokation: Rendsburggade 2, 9000 Aalborg</p>
         <p>Åbningstider: <br />Mandag, Tirsdag, Fredag 09-14 <br /></p>
         <p>Lukket: <br />Onsdag, Torsdag, Lørdag, Søndag</p>
@@ -130,10 +137,61 @@
               placeholder="Skriv din besked her - spørgsmål, arrangementer og firmaaftaler"
             ></textarea>
           </div>
-
           <button type="submit">Send besked</button>
         </form>
       </div>
     </main>
+    <footer>
+      <div class="footer-top container">
+        <a class="logo" href="./index.html">
+          <span class="logoText">Caféen <br />i Nørregade</span>
+          <img
+            class="logoSVG"
+            src="./assets/img/Logo Coffee Heart.svg"
+            alt="Logo Coffee Heart"
+          />
+        </a>
+      </div>
+      <div class="footer-text container">
+        <p>
+          Hos Caféen i Nørregade tror vi på, at alle fortjener en plads i
+          fællesskabet. Som socialøkonomisk café skaber vi rummelige
+          arbejdspladser og gode oplevelser for både gæster og medarbejdere.
+        </p>
+      </div>
+      <div class="åbningstider container">
+        <h3>Åbningstider:</h3>
+        <p>Mandag, Tirsdag, Fredag:<br />09.00 - 14.00</p>
+        <p>Onsdag, Torsadg, Lørdag og Søndag:<br />Lukket</p>
+      </div>
+      <div class="footerKontakt container">
+        <h3>Kontakt</h3>
+        <div class="icons">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Rendsburggade 2, 9000 Aalborg</span>
+        </div>
+        <div class="icons">
+          <i class="fa-solid fa-envelope"></i>
+          <span>post@no76.dk</span>
+        </div>
+        <div class="icons">
+          <i class="fa-solid fa-phone"></i>
+          <span> 40 81 61 41</span>
+        </div>
+        <div class="icons">
+          <i class="fa-solid fa-id-badge"></i>
+          <span>CVR: 44615134</span>
+        </div>
+      </div>
+      <div class="socials container">
+        <div>
+          <p>Følg os på</p>
+        </div>
+        <div class="icons">
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
