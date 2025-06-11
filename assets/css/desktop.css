@@ -131,6 +131,32 @@ section {
 
 /*  */
 /* Social Ansvar */
+.social-barrista-text, .social-udflugt {
+    display: flex;
+}
+
+.social-barrista-text img, .social-udflugt img {
+    border-radius: 20px;
+    width: 50%;
+    margin-left: 100px;
+}
+.barrista-navigation img, .cafe-historier img {
+    width: 400px;
+    height: 273px;
+}
+
+.social-pic {
+    border-radius: 20px;
+}
+
+.cafe-historier {
+    display: flex;
+    justify-content: center;
+}
+
+.cafe-historier img {
+    width: 100%;
+}
 /*  */
 
 /*  */
