@@ -115,6 +115,24 @@ section {
 }
 /*  */
 /* Forside */
+.menuCardForsideContent {
+    border-radius: 20px;
+}
+.navigationMad{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 30px;
+}
+.fepForside {
+    display: flex;
+}
+.fep2Navigation {
+    display: flex;
+    gap: 30px;
+
+}
 
 /*  */
 
@@ -260,6 +278,7 @@ section {
 
 
 /* Blog indlæg */
+
 
 /* Footer */
 .footer-top {
