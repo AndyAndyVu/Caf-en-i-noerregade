@@ -44,10 +44,12 @@
     display: block;
 }
 /* Generel kode */
-.mainForside {
-    margin: 144px;
+.main144 {
+    margin-inline: 144px;
 }
-
+.main320 {
+    margin-inline: 320px;
+}
 p {
     font-size: var(--desktop-body);
     max-width: 80ch;
@@ -84,11 +86,11 @@ nav {
 }
 
 main {
-    margin-inline: 20px;
+    margin: 144px;
 }
 
 h1 {
-    margin-bottom: var(--desktop-spacing-md);
+    margin-bottom: var(--desktop-spacing-lg);
 }
 
 p,
@@ -116,6 +118,7 @@ section {
 
 /*  */
 /* MenuKort */
+
 .menu-text p{
     font-size: var(--desktop-body);
 }
@@ -165,9 +168,6 @@ section {
     display: flex;
     justify-content: center;
 }
-.mad-text p {
-    
-}
 .mad-text img {
     width: 50%;
     height: 405px;
@@ -175,11 +175,15 @@ section {
 }
 .mad-container {
     display: flex;
-    margin-top: 200;    
 }
 
 .menuCard {
     display: flex;
+    
+}
+
+.madMedKaerlighedCardContent{
+    width: 100%;
 }
 
 .menuCard img {
@@ -193,6 +197,20 @@ section {
 
 /*  */
 /* Leverandør */
+
+.lev-text {
+    display: flex;
+}
+.leverandør-pic {
+    width: 50%;
+    margin-left: 20px;
+}
+
+.mad-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 /*  */
 
 /*  */
