@@ -44,6 +44,10 @@
     display: block;
 }
 /* Generel kode */
+.mainForside {
+    margin: 144px;
+}
+
 p {
     font-size: var(--desktop-body);
     max-width: 80ch;
@@ -112,6 +116,13 @@ section {
 
 /*  */
 /* MenuKort */
+.menu-text p{
+    font-size: var(--desktop-body);
+}
+.cards-menu {
+    display: flex;
+    gap: 64px;
+}
 /*  */
 
 /* Spisekort */
