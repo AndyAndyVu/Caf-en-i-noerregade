@@ -1,4 +1,4 @@
-@media (min-width: 1024px) {
+@media (min-width: 1440px) {
 /* Nav bar skjul */
 .navbar-mobile {
     display: none;
@@ -79,6 +79,12 @@ h4 {
     font-size: var(--desktop-h4);
 }
 
+.footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+}
 /* Spacing & Layout */
 /*  */
 nav {
@@ -255,4 +261,12 @@ section {
 
 /* Blog indlæg */
 
+/* Footer */
+.footer-top {
+    justify-content: left;
+}
+
+.footer-text {
+    max-width: 80ch;
+}
 }
