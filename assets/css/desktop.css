@@ -1,0 +1,160 @@
+@media (min-width: 1024px) {
+/* Nav bar skjul */
+.navbar-mobile {
+    display: none;
+}
+.navbar-desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-pink);
+}
+.navbar-desktop a:hover {
+    border-bottom: 2px solid white;
+}
+
+.desktop-menu {
+    display: flex;
+    list-style: none;
+}
+
+.desktop-menu li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.desktop-menu a,
+.dropdown-title {
+    text-decoration: none;
+    color: var(--color-black);
+    font-weight: var(--font-weight-semibold);
+    white-space: nowrap;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--color-pink);
+    list-style: none;
+    white-space: nowrap;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+/* Generel kode */
+p {
+    font-size: var(--desktop-body);
+    max-width: 80ch;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Quicksand", sans-serif;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: var(--desktop-h1);
+}
+
+h2 {
+    font-size: var(--desktop-h2);
+}
+
+h3 {
+    font-size: var(--desktop-h3);
+}
+
+h4 {
+    font-size: var(--desktop-h4);
+}
+
+/* Spacing & Layout */
+/*  */
+nav {
+    margin-bottom: var(--desktop-spacing-lg);
+}
+
+main {
+    margin-inline: 20px;
+}
+
+h1 {
+    margin-block: var(--desktop-spacing-md);
+}
+
+p,
+h2,
+h3,
+h4 {
+    margin-bottom: var(--desktop-spacing-sm);
+}
+
+.container {
+    margin-bottom: var(--desktop-spacing-md);
+}
+
+section {
+    margin-bottom: var(--desktop-spacing-xl);
+}
+/*  */
+/* Forside */
+
+/*  */
+
+/*Focus Entry points*/
+
+/* Testimonials */
+
+/*  */
+/* MenuKort */
+/*  */
+
+/* Spisekort */
+
+/* Drikke og mad sektion */
+
+/*  */
+/* Social Ansvar */
+/*  */
+
+/*  */
+/* Mad med kærlighed */
+/*  */
+
+
+/*  */
+/* Leverandør */
+/*  */
+
+/*  */
+/* Arrangmenter */
+/*  */
+
+
+/*  */
+/* Firmaaftaler */
+/*  */
+
+
+/*  */
+/* Form styling */
+/*  */
+
+/*  */
+/* Om os*/
+/*  */
+
+/* Hvem er vi */
+
+
+/* Blog */
+
+
+/* Blog indlæg */
+
+}

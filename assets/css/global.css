@@ -7,7 +7,10 @@
   box-sizing: border-box;
 }
 
-
+/* Nav skjul og vis */
+.navbar-desktop {
+  display: none;
+}
 /*  */
 /* Typography */
 /*  */
