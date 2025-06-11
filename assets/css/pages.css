@@ -84,6 +84,9 @@
   justify-content: space-between;
   margin-bottom: var(--mobile-spacing-md);
 }
+.h1-drikkekort {
+  display: none;
+}
 
 .foodTitleTags {
   display: flex;
@@ -206,7 +209,6 @@
   background-color: var(--color-pink);
   padding: 20px;
   border-radius: 15px;
-  max-width: 500px;
 }
 
 form {

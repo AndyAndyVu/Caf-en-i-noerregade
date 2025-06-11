@@ -126,6 +126,11 @@ section {
     display: flex;
     gap: 64px;
 }
+
+.foodPrice {
+    margin-left: auto;
+    margin-left: 100px;
+}
 /*  */
 
 /* Spisekort */
@@ -173,7 +178,7 @@ section {
     height: 405px;
     margin-left: 20px;
 }
-.mad-container {
+.madK-container {
     display: flex;
 }
 
@@ -215,6 +220,9 @@ section {
 
 /*  */
 /* Arrangmenter */
+.form-container {
+    width: 100%;
+}
 /*  */
 
 
@@ -232,6 +240,14 @@ section {
 /*  */
 
 /* Hvem er vi */
+.hvem-text {
+    display: flex;
+}
+
+.hvem-text img {
+    width: 50%;
+    height: 442px;
+}
 
 
 /* Blog */
