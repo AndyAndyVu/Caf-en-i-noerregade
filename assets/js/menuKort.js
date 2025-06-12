@@ -220,22 +220,33 @@ function renderDrinks(drinkCategories, drinkItems) {
 }
 
 // vis eller skjul sektioner
+const madButton = document.querySelector(".madButton");
+const drikkeButton = document.querySelector(".drikkeButton");
+
 function visMad() {
   madContainer.style.display = "block";
   drikkeContainer.style.display = "none";
   document.querySelector(".menu-text").style.display = "block"; // Vis tekst
+  document.querySelector(".menuDrinkTopText").style.display = "none"; // Skjul tekst
 
   document.querySelector(".h1-spisekort").style.display = "block";
   document.querySelector(".h1-drikkekort").style.display = "none";
+
+  madButton.classList.add("active");
+  drikkeButton.classList.remove("active");
 }
 function visDrikke() {
   madContainer.style.display = "none";
   drikkeContainer.style.display = "block";
+  document.querySelector(".menuDrinkTopText").style.display = "block"; // Vis tekst
   document.querySelector(".menu-text").style.display = "none"; // Skjul tekst
 
   // Vis/skjul overskrifter
   document.querySelector(".h1-spisekort").style.display = "none";
   document.querySelector(".h1-drikkekort").style.display = "block";
+
+  drikkeButton.classList.add("active");
+  madButton.classList.remove("active");
 }
 
 // Start side

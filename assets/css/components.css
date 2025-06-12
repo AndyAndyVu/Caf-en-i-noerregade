@@ -145,4 +145,9 @@ button {
   border-radius: 25px;  
   border: none;
   cursor: pointer;
+  
+  transition: transform 0.3s ease-in-out;
+}
+button:hover:not(.menuButton) {
+  transform: scale(1.05);
 }

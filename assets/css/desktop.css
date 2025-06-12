@@ -158,6 +158,10 @@ section {
 .menu-top img {
     width: 100vw;
 }
+.menuTopTekst{
+    display: flex;
+    gap: 2rem;
+}
 /*  */
 
 /* Spisekort */

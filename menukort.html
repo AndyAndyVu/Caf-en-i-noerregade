@@ -11,6 +11,7 @@
     />
     <script src="./assets/js/menuKort.js" defer></script>
     <script src="./assets/js/navMenu.js" defer></script>
+    <script src="./assets/js/animation.js" defer></script>
     <meta name="SKRIV SEO HER" content="SKRIV SEO HER" />
   </head>
   <body>
@@ -109,26 +110,35 @@
     <main class="main320">
       <section>
         <div class="menu-toggle flex-center">
-          <button onclick="visMad()">
+          <button class="madButton active" onclick="visMad()">
             Spisekort<i class="fas fa-utensils"></i>
           </button>
-          <button onclick="visDrikke()">
+          <button class="drikkeButton" onclick="visDrikke()">
             Drikkekort<i class="fas fa-mug-hot"></i>
           </button>
         </div>
       </section>
 
-      <section>
-        <div class="menu-text">
-          <p>
-            🌱 Vegansk<br />
-            🌾 Glutenfri<br />
-            👍 Anbefalet af caféen<br />
-            ⭐ Mest populære <br />
-            🧒 Børnevenlig
-          </p>
-          <p><strong>*Vi tilbyder 15% studierabat</strong></p>
+      <section class="menu-text">
+        <div class="menuTopTekst">
+          <p>🌱 Vegansk</p>
+          <p>🌾 Glutenfri</p>
+          <p>👍 Anbefalet af caféen</p>
+          <p>⭐ Mest populære</p>
+          <p>🧒 Børnevenlig</p>
         </div>
+        <p><strong>*Vi tilbyder 15% studierabat</strong></p>
+      </section>
+
+      <section class="menuDrinkTopText">
+        <p>
+          Vores kaffebønner er fra Guatemala og har den klassiske
+          mellemamerikanske syrlighed og noter af citrus.
+        </p>
+        <p>
+          Vi bruger økologisk mælk fra Naturmælk - så smager kaffen bare bedre.
+        </p>
+        <p><strong>*Vi tilbyder 15% studierabat</strong></p>
       </section>
 
       <section>
