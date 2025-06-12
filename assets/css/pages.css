@@ -26,6 +26,10 @@
   border-bottom-right-radius: 10px;
   margin-bottom: var(--mobile-spacing-md);
 }
+.fas {
+  margin-left: var(--mobile-spacing-sm);
+  color: 
+}
 
 /*Focus Entry points*/
 .fepForside h2 {
