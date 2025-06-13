@@ -87,12 +87,12 @@ h4 {
 }
 /* Spacing & Layout */
 /*  */
-nav {
+nav{
     margin-bottom: var(--desktop-spacing-lg);
 }
 
 main {
-    margin: 144px;
+    margin-inline: 144px;
 }
 
 h1 {
