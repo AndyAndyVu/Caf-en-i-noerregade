@@ -126,13 +126,64 @@ section {
     margin-inline: 30px;
 }
 .fepForside {
-    display: flex;
-}
-.fep2Navigation {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
     gap: 30px;
-
+    
 }
+.fepArrangementer-button {
+    margin-bottom: 26px;
+}
+
+.testimonials {
+    background-image: url(../img/backgroundStemningTestimonials.svg);
+    background-size: 100%;
+}
+
+.reviewText {
+    font-size: var(--deskstop-breadcrumbs);
+    margin: 0;
+}
+
+.reviewRight {
+    display: flex;
+    justify-content: right;
+    position: relative;
+}
+
+.reviewBubbleRight {
+    max-width: fit-content;
+    width: 50vw;
+}
+
+.reviewContentRight {
+    position: absolute;
+    top: 20px;
+    left: 85%;
+    transform: translateX(-100%);
+    width: 60vw;
+}
+
+.reviewLeft {
+    display: flex;
+    justify-content: left;
+    position: relative;
+}
+
+.reviewBubbleLeft {
+    max-width: fit-content;
+    width: 50vw;
+    transform: scaleX(-1);
+}
+
+.reviewContentLeft {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 50vw;
+}
+
 
 /*  */
 
