@@ -221,6 +221,10 @@ section {
 
 /*  */
 /* Social Ansvar */
+.text-center img {
+    width: 100vw;
+    border-radius: 0px;
+}
 .social-barrista-text, .social-udflugt {
     display: flex;
 }
