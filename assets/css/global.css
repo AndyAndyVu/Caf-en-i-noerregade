@@ -88,6 +88,10 @@ img {
 iframe {
   aspect-ratio: 1/1;
 }
+.imageRatio{
+  aspect-ratio: 1.5/1;
+  object-fit: cover;
+}
 
 /*  */
 /* Utility classes */
