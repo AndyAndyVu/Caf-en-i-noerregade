@@ -190,6 +190,19 @@ section {
 /*Focus Entry points*/
 
 /* Testimonials */
+.reviewText {
+    font-size: 1.5vw;
+    margin: 0;
+}
+.reviewContentRight {
+    width: 35vw;
+    top: 40px;
+}
+.reviewContentLeft {
+    width: 40vw;
+    left: 40px;
+    top: 40px;
+}
 
 /*  */
 /* MenuKort */
