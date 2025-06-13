@@ -6,6 +6,6 @@
     filter: brightness(0.5);
     transition: transform 0.3s ease-out, filter 0.5s ease-out;
 }
-.active{
+.animationActive{
 filter: brightness(1);
 }

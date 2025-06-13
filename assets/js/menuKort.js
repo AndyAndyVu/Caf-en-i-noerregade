@@ -232,8 +232,8 @@ function visMad() {
   document.querySelector(".h1-spisekort").style.display = "block";
   document.querySelector(".h1-drikkekort").style.display = "none";
 
-  madButton.classList.add("active");
-  drikkeButton.classList.remove("active");
+  madButton.classList.add("animationActive");
+  drikkeButton.classList.remove("animationActive");
 }
 function visDrikke() {
   madContainer.style.display = "none";
@@ -245,8 +245,8 @@ function visDrikke() {
   document.querySelector(".h1-spisekort").style.display = "none";
   document.querySelector(".h1-drikkekort").style.display = "block";
 
-  drikkeButton.classList.add("active");
-  madButton.classList.remove("active");
+  drikkeButton.classList.add("animationActive");
+  madButton.classList.remove("animationActive");
 }
 
 // Start side

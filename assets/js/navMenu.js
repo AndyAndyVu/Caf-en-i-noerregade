@@ -8,3 +8,4 @@ navMenuButton.addEventListener("click", () => {
   menuBlur.classList.toggle("blurActive");
   menuButtons.classList.toggle("menu-toggleZIndex");
 });
+  
